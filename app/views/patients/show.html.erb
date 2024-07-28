@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @patient %>
+
+<section>
+  <%= link_to "Edit this patient", edit_patient_path(@patient) %> |
+  <%= link_to "Back to patients", patients_path %>
+
+  <%= button_to "Destroy this patient", @patient, method: :delete %>
+</section>
+
+<section>
+  <%= link_to 'Add new note', new_patient_note_path(@patient) %>
+</section>
+
+<section>
+  <% @patient.notes.each do |note| %>
+    <p><%= note.title %></p>
+    <p><%= note.content %></p>
+    <p>Added by: <%= note.author.name %>, <%= note.author.title %></p>
+  <% end %>
+</section>
