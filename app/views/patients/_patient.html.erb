@@ -1,12 +1,10 @@
-<div id="<%= dom_id patient %>">
+<div id="<%= dom_id patient %>" class="patient">
   <p>
-    <strong>First name:</strong>
     <%= patient.first_name %>
-  </p>
-
-  <p>
-    <strong>Last name:</strong>
     <%= patient.last_name %>
   </p>
 
+  <p>
+    <%= link_to "View notes", patient, class: 'view_patient_button' %>
+  </p>
 </div>

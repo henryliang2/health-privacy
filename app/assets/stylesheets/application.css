@@ -13,3 +13,44 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+  font-size: 16px;
+}
+
+#patients {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+  gap: 1rem;
+}
+
+.patient {
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.view_patient_button {
+  background: purple;
+  padding: 0.75rem;
+  color: white;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.patient__notes {
+  margin: 2rem 0;
+}
+
+.note {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
